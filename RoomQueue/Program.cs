@@ -25,6 +25,7 @@ class Program
         
         try
         {
+            //ดักเงื่อนไขกรณีไม่มีคนออกจากห้อง
             GetRoom(peopleQ.Dequeue());
         }
         catch (InvalidOperationException e)
@@ -35,8 +36,6 @@ class Program
     }
     static void GetRoom(Person p)
     {
-        //sort timestamp, เก่าสุด ก่อน
-        //???
         Console.WriteLine("{0} got room!", p.FirstName);
         
     }
