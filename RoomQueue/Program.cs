@@ -20,9 +20,8 @@ class Program
         GetRoom(peopleQ.Dequeue());
         GetRoom(peopleQ.Dequeue());
         GetRoom(peopleQ.Dequeue());
-        //sort timestamp เก่าสุด
-        //???
-        //ผู้ถูกนวดใหม่เข้ามาในห้องที่ผู้ถูกนวดเก่าออกไปนานที่สุด
+        
+        //ผู้ถูกนวดใหม่เข้ามาในห้องที่ผู้ถูกนวดเก่าออกไปนานที่สุด 
         peopleQ.Enqueue(new Person { FirstName = "Tanade", LastName = "Korwanitgun", Age = 33, Timestamp = "2022‑11‑01 12:25:56" });
 
         
@@ -39,5 +38,7 @@ class Program
     static void GetRoom(Person p)
     {
         Console.WriteLine("{0} got room!", p.FirstName);
+        //sort timestamp เก่าสุด
+        //???
     }
 }
